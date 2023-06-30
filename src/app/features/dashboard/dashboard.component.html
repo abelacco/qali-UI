@@ -1,0 +1,19 @@
+<div class="grid grid-cols-sidebarMainFooter grid-rows-headerMainFooter gap-1 h-screen p-1 bg-[#F5F7FC]">
+  <header class="col-span-10 bg-qaliBlue border-2 border-black h-16">
+    <app-header></app-header>
+  </header>
+
+  <aside class="col-start-1 col-end-2 row-start-2 row-end-4 bg-qaliBlue border-2">
+    <app-sidebar></app-sidebar>
+  </aside>
+
+  <main class="col-start-2 col-end-11 row-start-2 row-end-3 bg-white border-2  overflow-auto">
+    <div class="h-full">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer class="col-start-2 col-end-11 row-start-3 row-end-4 bg-white border-2 h-10">
+    <app-footer></app-footer>
+  </footer>
+</div>
