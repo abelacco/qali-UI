@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ResumenRoutingModule } from './resumen-routing.module';
 import { ResumenComponent } from './resumen.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ResumenComponent } from './resumen.component';
   ],
   imports: [
     CommonModule,
-    ResumenRoutingModule
+    ResumenRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class ResumenModule { }

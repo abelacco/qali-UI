@@ -7,12 +7,80 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 
+
+
 :root {
-  --font-family: "MediSans", sans-serif;
+  --font-family: "Raleway", sans-serif;
 }
 
 
 body {
   font-family: var(--font-family);
+  background-color: white;
 }
 
+
+/*
+PRIMENG
+*/
+
+.checkbox-rounded {
+  .p-checkbox-box {
+    border-radius: 100% !important;
+    border: 5px solid #132B5B;
+
+  }
+  .p-checkbox-box.p-highlight {
+    border-color: #132B5B;
+    background: #0FFFA9;
+  }
+
+  .p-checkbox .p-checkbox-box .p-icon {
+    width: 2px;
+    height: 2px;
+    color: #0FFFA9 !important;
+  }
+
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    border-color: #132B5B;
+    background: #0FFFA9;
+  }
+
+}
+
+.dropdown-autoheight {
+  .p-dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .p-dropdown-label {
+    font-size: 17px;
+    font-weight: bold;
+  }
+}
+
+.dropdown-clean {
+  .p-dropdown {
+    border: inherit;
+  }
+}
+
+.pcalendar-clean {
+  .p-calendar {
+    height: 100%;
+  }
+  .p-inputtext {
+    height: 100%;
+    border: none;
+    font-weight: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    padding: inherit;
+    width: inherit;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
