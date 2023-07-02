@@ -7,6 +7,20 @@ import { DynamicDialogRef } from 'primeng/dynamicdialog';
   styleUrls: ['./agregar-experiencia-profesional.component.scss']
 })
 export class AgregarExperienciaProfesionalComponent {
+
+  cities: any = [
+    {
+      value: "ponte"
+    },
+    {
+      value: "en"
+    },{
+      value: "4 pata"
+    }
+  ]
+  selectedCity = null
+  date = new Date()
+
   constructor(private dynamidialog: DynamicDialogRef) {}
 
   cerrarmodal() {

@@ -49,21 +49,48 @@ PRIMENG
 }
 
 .dropdown-autoheight {
-  .p-dropdown {
+  .p-dropdown, .p-multiselect {
     height: 100%;
     display: flex;
     align-items: center;
   }
 
-  .p-dropdown-label {
+  .p-dropdown-label, .p-multiselect-label {
     font-size: 17px;
     font-weight: bold;
   }
 }
 
+.dropdown-style1 {
+  .p-dropdown-trigger, .p-multiselect-trigger {
+    position: relative;
+    .p-icon-wrapper {
+      svg {
+        display: none;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 12px;
+      background-image: url("assets/images/dropdown-icon.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 .dropdown-clean {
-  .p-dropdown {
+  .p-dropdown, .p-multiselect {
     border: inherit;
+    background-color: inherit;
+
+    &:not(.p-disabled).p-focus {
+      box-shadow: inherit;
+      border-color: inherit;
+    }
   }
 }
 
@@ -79,8 +106,40 @@ PRIMENG
     text-align: inherit;
     padding: inherit;
     width: inherit;
+    background-color: inherit;
     &:focus {
       box-shadow: none;
     }
+  }
+}
+
+.pcalendar-style1 {
+  position: relative;
+
+  .p-calendar {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 0;
+      width: 20px;
+      height: 12px;
+      background-image: url("assets/images/dropdown-icon.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+
+* {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #132B5B;
   }
 }

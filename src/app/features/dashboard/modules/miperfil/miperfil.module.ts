@@ -9,6 +9,10 @@ import { AgregarExperienciaProfesionalComponent } from './modals/agregar-experie
 import { ModalFormacionAcademicaComponent } from './modals/modal-formacion-academica/modal-formacion-academica.component';
 import { AgregarProfesionAcademicaComponent } from './modals/agregar-profesion-academica/agregar-profesion-academica.component';
 import { DialogModule } from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import { CalendarModule } from 'primeng/calendar';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { DialogModule } from 'primeng/dialog';
     CommonModule,
     MiperfilRoutingModule,
     FontAwesomeModule,
-    DialogModule
+    DialogModule,
+    DropdownModule,
+    FormsModule,
+    CalendarModule,
+    MultiSelectModule
   ]
 })
 export class MiperfilModule { }

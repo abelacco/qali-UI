@@ -4,58 +4,74 @@
             <div class="w-1/2">
                 <div class="flex flex-col gap-3">
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Nombres</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Nombres</label>
+                        <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Apellidos</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Apellidos</label>
+                        <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="DEVOTO RODRÍGUEZ">
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Grado académico</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Grado académico</label>
+                        <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                        </div>
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Especialidad</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Especialidad</label>
+                        <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                        </div>
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Sub-Especialidad</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Sub-Especialidad</label>
+                        <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                            <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-multiSelect>
+                        </div>
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Código de Colegiatura</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Código de Colegiatura</label>
+                        <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="583">
                     </div>
                     <div class="grid grid-cols-2 gap-7">
                         <div class="">
-                            <label for="" class="text-[13px] font-extrabold block">Ciudad</label>
-                            <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                            <label for="" class="text-lg font-extrabold block">Ciudad</label>
+                            <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                            </div>
                         </div>
                         <div class="">
-                            <label for="" class="text-[13px] font-extrabold block">Distrito</label>
-                            <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                            <label for="" class="text-lg font-extrabold block">Distrito</label>
+                            <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                            </div>
                         </div>
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">DNI</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">DNI</label>
+                        <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="349528323">
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Celular</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Celular</label>
+                        <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="+51 123456789">
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">¿Trabajas con seguro de salud?</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">¿Trabajas con seguro de salud?</label>
+                        <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                        </div>
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Modalidad de atención</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Modalidad de atención</label>
+                        <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                        </div>
                     </div>
                     <div class="">
-                        <label for="" class="text-[13px] font-extrabold block">Número de afiliado</label>
-                        <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="LUCÍA ISABEL">
+                        <label for="" class="text-lg font-extrabold block">Número de afiliado</label>
+                        <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                            <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="LICENCIADA" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,38 +83,38 @@
                         </div>
                     </div>
                     <div class="">
-                        <textarea class="border border-[#00000082] bg-[#0FFFA921] py-2 h-[59px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" [value]="'“Donde quiera que se ama el arte de la medicina se ama también a la humanidad”'"></textarea>
+                        <textarea class="border-2 border-[#00000082] bg-[#0FFFA921] py-2 h-[80px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue outline-none" [value]="'“Donde quiera que se ama el arte de la medicina se ama también a la humanidad”'"></textarea>
                     </div>
                     <div class="">
-                        <div class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue cursor-pointer flex items-center justify-between" (click)="modalListaExperiencias()">
+                        <div class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer flex items-center justify-between" (click)="modalListaExperiencias()">
                             <input type="text" class="" value="Experiencia Profesional" disabled>
-                            <button class="bg-[#D9D9D9] rounded-xl font-extrabold w-[30px] h-[16px] flex items-center justify-center pb-1">ver</button>
+                            <button class="bg-[#D9D9D9] rounded-xl font-extrabold w-[40px] h-[20px] flex items-center justify-center pb-1">ver</button>
                         </div>
                     </div>
                     <div class="">
-                        <div class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue cursor-pointer flex items-center justify-between">
+                        <div class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer flex items-center justify-between">
                             <input type="text" class="" value="Título de Especialidad" disabled>
-                            <button class="bg-[#D9D9D9] rounded-xl font-extrabold w-[30px] h-[16px] flex items-center justify-center pb-1">ver</button>
+                            <button class="bg-[#D9D9D9] rounded-xl font-extrabold w-[40px] h-[20px] flex items-center justify-center pb-1">ver</button>
                         </div>
                     </div>
                     <div class="">
-                        <div class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue cursor-pointer flex items-center justify-between">
+                        <div class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer flex items-center justify-between" (click)="modalFormacionAcademica()">
                             <input type="text" class="" value="Formación Académica" disabled>
-                            <button class="bg-[#D9D9D9] rounded-xl font-extrabold w-[30px] h-[16px] flex items-center justify-center pb-1">ver</button>
+                            <button class="bg-[#D9D9D9] rounded-xl font-extrabold w-[40px] h-[20px] flex items-center justify-center pb-1">ver</button>
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <div class="flex items-center gap-3">
-                            <p class="text-[32px]"><fa-icon [icon]="['fab', 'linkedin']"></fa-icon></p>
-                            <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingrese link">
+                            <p class="text-[40px]"><fa-icon [icon]="['fab', 'linkedin']"></fa-icon></p>
+                            <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingrese link">
                         </div>
                         <div class="flex items-center gap-3">
-                            <p class="text-[32px]"><fa-icon [icon]="['fab', 'instagram']"></fa-icon></p>
-                            <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingrese link">
+                            <p class="text-[40px]"><fa-icon [icon]="['fab', 'instagram']"></fa-icon></p>
+                            <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingrese link">
                         </div>
                         <div class="flex items-center gap-3">
-                            <p class="text-[32px]"><fa-icon [icon]="['fab', 'tiktok']"></fa-icon></p>
-                            <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingrese link">
+                            <p class="text-[40px]"><fa-icon [icon]="['fab', 'tiktok']"></fa-icon></p>
+                            <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingrese link">
                         </div>
                     </div>
                     <div class="mt-auto -mb-5 flex justify-end">

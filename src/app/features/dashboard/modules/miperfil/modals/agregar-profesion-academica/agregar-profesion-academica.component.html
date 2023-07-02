@@ -1,1 +1,64 @@
-<p>agregar-profesion-academica works!</p>
+<div>
+  <h2 class="text-2xl text-qaliGreen font-extrabold absolute top-[30px]">Sumar Profesión Académica</h2>
+  <div class="flex justify-end">
+      <span class="flex items-start gap-1 font-bold text-black text-sm">
+          <p class="text-[#CF1818]">*</p>Campos obligatorios
+      </span>
+  </div>
+  <div class="flex justify-center">
+      <div class="w-3/4">
+          <div class="mt-2 grid grid-cols-2 gap-20 gap-y-2">
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Título / Carrera</label>
+                  <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa tu título/carrera">
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">País</label>
+                  <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                  </div>
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Título / Carrera</label>
+                  <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                  </div>
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Área de estudio</label>
+                  <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                  </div>
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Institución</label>
+                  <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa tu institución">
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Estado</label>
+                  <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                  </div>
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Fecha de inicio</label>
+                  <div class="grid grid-cols-2 gap-3">
+                      <p-calendar [timeOnly]="true" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                      <p-calendar dateFormat="yy" view="year" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                  </div>
+              </div>
+              <div class="">
+                  <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Fecha de finalización</label>
+                  <div class="grid grid-cols-2 gap-3">
+                      <p-calendar [timeOnly]="true" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                      <p-calendar dateFormat="yy" view="year" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="flex justify-center gap-5 -mb-5 mt-10">
+      <button class="text-[20px] text-qaliGreen font-extrabold" (click)="cerrarmodal()">Cancelar</button>
+      <button class="text-[20px] text-qaliGreen font-extrabold" (click)="cerrarmodal()">Guardar</button>
+  </div>
+</div>

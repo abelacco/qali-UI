@@ -3,35 +3,40 @@
     <div class="flex justify-end">
         <span class="flex items-start gap-1 font-bold text-black text-sm"><p class="text-[#CF1818]">*</p>Campos obligatorios</span>
     </div>
-    <div class="mt-10">
+    <div class="mt-2">
         <div class="">
-            <label for="" class="text-[13px] font-extrabold flex items-start gap-1">Empresa <p class="text-[#CF1818]">*</p></label>
-            <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-[171px] mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa el nombre">
+            <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Empresa <p class="text-[#CF1818]">*</p></label>
+            <input type="text" class="border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-[230px] mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa el nombre">
         </div>
-        <div class="flex justify-between items-center gap-10 mt-4">
+        <div class="grid grid-cols-3 items-center gap-10 mt-4">
             <div class="">
-                <label for="" class="text-[13px] font-extrabold flex items-start gap-1">País <p class="text-[#CF1818]">*</p></label>
-                <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa el nombre">
+                <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">País <p class="text-[#CF1818]">*</p></label>
+                <div class="h-[45px] border-2 border-[#00000082] bg-[#0FFFA921] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style1 w-full"></p-dropdown>
+                </div>
             </div>
-            <div class="">
-                <label for="" class="text-[13px] font-extrabold flex items-start gap-1">Fecha de inicio <p class="text-[#CF1818]">*</p></label>
-                <div class="flex items-center gap-3">
-                    <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa el nombre">
-                    <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa el nombre">
+            <div>
+                <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Fecha de inicio <p class="text-[#CF1818]">*</p></label>
+                <div class="grid grid-cols-2 gap-3">
+                    <p-calendar [timeOnly]="true" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                    <p-calendar dateFormat="yy" view="year" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
                 </div>
             </div>
             <div class="">
-                <label for="" class="text-[13px] font-extrabold flex items-start gap-1">Fecha de finalización <p class="text-[#CF1818]">*</p></label>
-                <input type="text" class="border border-[#00000082] bg-[#0FFFA921] h-[29px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-[13px] px-2 font-sans font-extrabold text-qaliBlue" placeholder="Ingresa el nombre">
+                <label for="" class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Fecha de finalización <p class="text-[#CF1818]">*</p></label>
+                <div class="grid grid-cols-2 gap-3">
+                    <p-calendar [timeOnly]="true" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                    <p-calendar dateFormat="yy" view="year" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-[#0FFFA921] h-[45px] outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue cursor-pointer"></p-calendar>
+                </div>
             </div>
         </div>
         <div class="flex flex-col justify-center items-center mt-5">
-            <h2 class="font-extrabold text-[13px] flex items-center gap-1">Descripción de Responsabilidades <p class="text-[#CF1818]">*</p></h2>
-            <textarea name="" [value]="123" class="px-2 py-2 border border-black rounded-[8px] mt-2 h-[81px] placeholder:text-lg placeholder:text-qaliGrey w-[407px] placeholder:font-bold placeholder:text-[12px] text-[12px] font-bold" placeholder="Escribe cuáles son tus tareas" id=""></textarea>
+            <h2 class="text-lg font-extrabold flex items-start gap-1 text-qaliBlue">Descripción de Responsabilidades <p class="text-[#CF1818]">*</p></h2>
+            <textarea name="" [value]="123" class="px-2 py-2 text-base outline-none w-3/4 border border-black rounded-[8px] mt-2 h-[81px] placeholder:text-lg placeholder:text-qaliGrey placeholder:font-bold placeholder:text-[12px] text-[12px] font-bold" placeholder="Escribe cuáles son tus tareas" id=""></textarea>
         </div>
     </div>
-    <div class="flex justify-center gap-5 -mb-5 mt-5">
-        <button class="text-[15px] text-qaliGreen font-extrabold" (click)="cerrarmodal()">Cancelar</button>
-        <button class="text-[15px] text-qaliGreen font-extrabold" (click)="cerrarmodal()">Guardar</button>
+    <div class="flex justify-center gap-5 -mb-5 mt-10">
+        <button class="text-xl text-qaliGreen font-extrabold" (click)="cerrarmodal()">Cancelar</button>
+        <button class="text-xl text-qaliGreen font-extrabold" (click)="cerrarmodal()">Guardar</button>
     </div>
-</div>
+  </div>

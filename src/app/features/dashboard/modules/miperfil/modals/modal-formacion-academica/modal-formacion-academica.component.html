@@ -1,1 +1,22 @@
-<p>modal-formacion-academica works!</p>
+<div>
+    <div class="flex items-center justify-between w-full mt-2 border-b border-black pb-1">
+        <h2 class="text-xl font-sans font-extrabold text-qaliBlue">Formación académica</h2>
+        <button class="flex items-center gap-2 text-xl font-sans font-extrabold text-qaliGreen" (click)="modalAgregarProfesionAcademica()"><fa-icon class="text-qaliBlue bg-qaliGreen rounded-full text-2xl flex justify-center items-center" [icon]="['far', 'plus-circle']"></fa-icon> <span class="flex items-center pb-0.5">Sumar formación</span></button>
+    </div>
+    <!-- EMPTY -->
+    <button class="flex items-center justify-center flex-col text-qaliGrey bg-[#DDDDDD6B] border border-[#0000001A] mt-5 rounded-md w-full py-5">
+        <fa-icon class="text-17 text-black" [icon]="['fas', 'school']"></fa-icon>
+        <span class="font-sans font-extrabold">Agrega tu primera experiencia profesional</span>
+    </button>
+    <!-- <div class="flex justify-between items-start mt-5">
+        <div class="flex flex-col gap-1">
+                <h2 class="text-xl font-extrabold text-[#5A135B]">Asistente de Enseñanza en Programación</h2>
+                <p class="text-lg font-extrabold text-[#5B4713]">Universidad Central de Venezuela</p>
+            <span class="text-base font-extrabold text-qaliGrey mt-4">Feb 2022 - Feb 2023</span>
+        </div>
+        <div class="flex justify-end gap-4 text-black">
+            <button><fa-icon [icon]="['fas', 'pen']"></fa-icon></button>
+            <button><fa-icon [icon]="['fas', 'trash']"></fa-icon></button>
+        </div>
+    </div> -->
+</div>
