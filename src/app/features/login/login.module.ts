@@ -7,6 +7,7 @@ import { LoginComponent } from './login.component';
 import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { InputTextModule } from 'primeng/inputtext';
     LoginRoutingModule,
     DividerModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    FontAwesomeModule
   ]
 })
 export class LoginModule { }

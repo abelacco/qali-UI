@@ -78,9 +78,15 @@
             <div class="w-1/2">
                 <div class="flex flex-col gap-5 h-screen">
                     <div class="flex justify-center">
-                        <div class="w-[224px] h-[216px]">
+                        <div class="w-[224px] h-[216px] relative rounded-[30px] overflow-hidden hover:[&>.cambiarfoto]:opacity-100">
                             <img src="assets/images/profile-img.svg" class="w-full h-full" alt="">
+                            <div class="absolute top-0 left-0 bg-[#132B5B50] w-full h-full opacity-0 cursor-pointer cambiarfoto duration-200">
+                              <p class="text-white h-full w-full flex items-center justify-center font-bold text-base whitespace-nowrap gap-2">Cambiar foto de perfil <fa-icon [icon]="['far', 'edit']"></fa-icon></p>
+                            </div>
                         </div>
+                    </div>
+                    <div class="flex justify-center">
+                      <p-button class="text-lg font-extrabold block text-white bg-qaliBlue rounded-lg w-fit text-center h-[45px] px-2">Editar foto <fa-icon [icon]="['far', 'edit']"></fa-icon></p-button>
                     </div>
                     <div class="">
                         <textarea class="border-2 border-[#00000082] bg-[#0FFFA921] py-2 h-[80px] w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-qaliBlue outline-none" [value]="'“Donde quiera que se ama el arte de la medicina se ama también a la humanidad”'"></textarea>

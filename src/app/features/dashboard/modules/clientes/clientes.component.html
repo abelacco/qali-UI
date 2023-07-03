@@ -1,1 +1,44 @@
-<p>clientes works!</p>
+<div class="py-10 px-5">
+    <div class="grid grid-cols-3 gap-5">
+        <div class="border-2 px-2 text-lg font-bold text-qaliBlue duration-200 font-sans outline-none hover:border-qaliBlue focus:border-qaliBlue border-[#00000082] h-[45px] rounded-lg mt-1 w-full flex items-center">
+            <input type="text" placeholder="Buscar Paciente" class="h-full w-full outline-none">
+            <p-button class="w-[30px] text-center"><fa-icon [icon]="['fas', 'search']" class="text-base"></fa-icon></p-button>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+            <p-calendar [timeOnly]="true" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-qaliBlue h-[45px] outline-none w-full mt-1 rounded-lg placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-white cursor-pointer"></p-calendar>
+            <p-calendar dateFormat="yy" view="year" [(ngModel)]="date" class="pcalendar-clean pcalendar-style1 border-2 border-[#00000082] bg-qaliBlue h-[45px] outline-none w-full mt-1 rounded-lg placeholder:text-qaliGrey placeholder:font-extrabold text-lg px-2 font-sans font-extrabold text-white cursor-pointer"></p-calendar>
+        </div>
+    </div>
+    <div class="mt-10">
+        <p-table [value]="examplevalues" [tableStyle]="{'min-width': '60rem'}" class="ptable-clean border-spacing-y-10 border-separate">
+            <ng-template pTemplate="header">
+                <tr class="bg-[#132B5B8F] text-white text-base font-sans font-bold">
+                    <th pSortableColumn="apellidos" class="w-[18%] text-center rounded-tl-lg rounded-bl-lg py-2">APELLIDOS <p-sortIcon field="code"></p-sortIcon></th>
+                    <th pSortableColumn="nombres" class="w-[18%] text-center py-2">NOMBRES <p-sortIcon field="name"></p-sortIcon></th>
+                    <th pSortableColumn="dni" class="w-[18%] text-center py-2">DNI <p-sortIcon field="category"></p-sortIcon></th>
+                    <th pSortableColumn="celular" class="w-[18%] text-center py-2">CELULAR <p-sortIcon field="quantity"></p-sortIcon></th>
+                    <th class="w-[4%] text-center py-2"></th>
+                    <th class="w-[18%] text-center rounded-tr-lg rounded-br-lg py-2">HISTORIA CLÍNICA</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-value>
+                <tr>
+                    <td class="py-2"></td>
+                    <td class="py-2"></td>
+                </tr>
+                <tr class="bg-[#0FFFA933] hover:bg-qaliBlue hover:text-qaliGreen hover:[&>]:text-qaliGreen text-[#144FC7]">
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap rounded-tl-lg rounded-bl-lg h-[45px] px-4 text-xl font-bold underline">{{value.apellidos}}</td>
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold underline">{{value.nombres}}</td>
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold">{{value.dni}}</td>
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold">{{value.celular}}</td>
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold underline"><span><fa-icon [icon]="['fab', 'whatsapp']" class="text-3xl text-qaliBlue"></fa-icon></span></td>
+                    <td class="h-[45px] px-4 rounded-tr-lg rounded-br-lg">
+                        <div class="flex justify-center items-center">
+                            <p-button class="bg-[#132B5B] text-white font-bold text-xl rounded-lg w-[100px] text-center h-[40px]" routerLink="historia-clinica">VER</p-button>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

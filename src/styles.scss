@@ -106,6 +106,7 @@ PRIMENG
     text-align: inherit;
     padding: inherit;
     width: inherit;
+    color: inherit;
     background-color: inherit;
     &:focus {
       box-shadow: none;
@@ -129,6 +130,57 @@ PRIMENG
       background-repeat: no-repeat;
       background-size: cover;
     }
+  }
+}
+
+
+p-button {
+  .p-button {
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    color: inherit;
+    padding: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    display: block;
+    border-radius: inherit;
+    border: inherit;
+    text-transform: inherit;
+
+    &:enabled:hover,&:enabled:active {
+      background: none;
+      color: inherit;
+      border-color: inherit;
+    }
+
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.ptable-clean {
+
+  th {
+    color: inherit !important;
+    background: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+
+    .p-sortable-column-icon {
+      color: inherit !important;
+    }
+  }
+
+  td {
+    padding: inherit;
   }
 }
 
