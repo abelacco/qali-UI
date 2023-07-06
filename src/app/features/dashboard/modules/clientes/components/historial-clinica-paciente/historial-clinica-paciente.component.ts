@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./historial-clinica-paciente.component.scss']
 })
 export class HistorialClinicaPacienteComponent {
+  cities: any = [
+    {
+        value: "1"
+    },
+    {
+        value: "2"
+    },
+    {
+        value: "3"
+    }
+  ]
 
+  selectedCity = null
 }

@@ -61,7 +61,7 @@ PRIMENG
   }
 }
 
-.dropdown-style1 {
+.dropdown-style1, .dropdown-style2{
   .p-dropdown-trigger, .p-multiselect-trigger {
     position: relative;
     .p-icon-wrapper {
@@ -78,6 +78,14 @@ PRIMENG
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+    }
+  }
+}
+
+.dropdown-style2 {
+  .p-dropdown-trigger, .p-multiselect-trigger {
+    &::before {
+      background-image: url("assets/images/Polygon-7.png");
     }
   }
 }
@@ -145,6 +153,7 @@ p-button {
     font-weight: inherit;
     text-align: inherit;
     display: block;
+    font-size: inherit;
     border-radius: inherit;
     border: inherit;
     text-transform: inherit;

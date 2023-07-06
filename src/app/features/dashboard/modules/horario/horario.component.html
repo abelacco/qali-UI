@@ -4,9 +4,9 @@
             <button class="w-1/2 h-[46px] text-xl font-bold rounded-md border-[3px]  bg-qaliBlue" [ngClass]="{ 'text-qaliGreen border-qaliGreen': numerovista == 0, 'text-white': numerovista != 0 }" (click)="numerovista = 0">PERSONALIZAR HORARIO</button>
             <button class="w-1/2 h-[46px] text-xl font-bold border-[3px] rounded-md bg-qaliBlue" [ngClass]="{ 'text-qaliGreen border-qaliGreen': numerovista == 1, 'text-white': numerovista != 1 }" (click)="numerovista = 1">VER MI AGENDA</button>
         </div>
-        <div class="mt-14 pb-5">
+        <div class="mt-14 pb-10">
             <div class="" *ngIf="numerovista == 0">
-                <div class="flex justify-center">
+                <div class="flex justify-start">
                     <ul class="w-1/2 flex flex-col gap-5">
                         <li class="">
                             <div class="border-b border-[#969696] pb-4">
@@ -142,15 +142,15 @@
                         </li>
                     </ul>
                 </div>
-                <h2 class="text-[15px] font-bold mt-8">¿Break antes o después del evento?</h2>
+                <!-- <h2 class="text-[15px] font-bold mt-8">¿Break antes o después del evento?</h2>
                 <div class="flex justify-start gap-2 mt-4">
                     <p-checkbox class="checkbox-rounded" [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
                     <p class="font-bold text-[15px]">Antes del evento</p>
                 </div>
                 <div class="flex justify-start gap-2 mt-4">
                     <p-checkbox class="checkbox-rounded" [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
-                    <div class="font-bold text-[15px] flex items-center gap-5 h-[38px]">Después del evento <div class=" border-[#969696] h-full rounded-5 border-2"><p-dropdown class="dropdown-autoheight dropdown-clean h-full" [options]="cities" [(ngModel)]="selectedCity" optionLabel="value"></p-dropdown></div></div>
-                </div>
+                    <div class="font-bold text-[15px] flex items-center gap-5 h-[38px]">Después del evento <div class=" border-[#969696] h-full rounded-5 border-2"><p-dropdown class="dropdown-autoheight dropdown-clean dropdown-style2 h-full" [options]="cities" [(ngModel)]="selectedCity" optionLabel="value"></p-dropdown></div></div>
+                </div> -->
             </div>
             <div class="flex justify-between w-full gap-10" *ngIf="numerovista == 1">
                 <div class="w-1/2 flex justify-center flex-col items-start">

@@ -17,7 +17,7 @@
                     <th pSortableColumn="nombres" class="w-[18%] text-center py-2">NOMBRES <p-sortIcon field="name"></p-sortIcon></th>
                     <th pSortableColumn="dni" class="w-[18%] text-center py-2">DNI <p-sortIcon field="category"></p-sortIcon></th>
                     <th pSortableColumn="celular" class="w-[18%] text-center py-2">CELULAR <p-sortIcon field="quantity"></p-sortIcon></th>
-                    <th class="w-[4%] text-center py-2"></th>
+                    <th pSortableColumn="celular" class="w-[18%] text-center py-2">FECHA DE CITA <p-sortIcon field="quantity"></p-sortIcon></th>
                     <th class="w-[18%] text-center rounded-tr-lg rounded-br-lg py-2">HISTORIA CLÍNICA</th>
                 </tr>
             </ng-template>
@@ -26,15 +26,15 @@
                     <td class="py-2"></td>
                     <td class="py-2"></td>
                 </tr>
-                <tr class="bg-[#0FFFA933] hover:bg-qaliBlue hover:text-qaliGreen hover:[&>]:text-qaliGreen text-[#144FC7]">
+                <tr class="bg-[#0FFFA933] hover:bg-qaliBlue hover:text-qaliGreen hover:[&>]:text-qaliGreen group text-[#144FC7]">
                     <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap rounded-tl-lg rounded-bl-lg h-[45px] px-4 text-xl font-bold underline">{{value.apellidos}}</td>
                     <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold underline">{{value.nombres}}</td>
                     <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold">{{value.dni}}</td>
-                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold">{{value.celular}}</td>
-                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold underline"><span><fa-icon [icon]="['fab', 'whatsapp']" class="text-3xl text-qaliBlue"></fa-icon></span></td>
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold">{{value.celular}} <fa-icon [icon]="['fab', 'whatsapp']" class="text-3xl ml-1"></fa-icon></td>
+                    <td class="text-center text-ellipsis overflow-hidden whitespace-nowrap h-[45px] px-4 text-xl font-bold">07/04/2023</td>
                     <td class="h-[45px] px-4 rounded-tr-lg rounded-br-lg">
                         <div class="flex justify-center items-center">
-                            <p-button class="bg-[#132B5B] text-white font-bold text-xl rounded-lg w-[100px] text-center h-[40px]" routerLink="historia-clinica">VER</p-button>
+                            <p-button class="bg-[#132B5B] group-hover:bg-qaliGreen group-hover:text-qaliBlue text-white font-bold text-xl rounded-lg w-[100px] text-center h-[40px]" routerLink="historia-clinica">VER</p-button>
                         </div>
                     </td>
                 </tr>
