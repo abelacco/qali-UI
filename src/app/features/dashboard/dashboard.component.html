@@ -1,4 +1,4 @@
-<div class="grid grid-cols-sidebarMainFooter grid-rows-headerMainFooter gap-1 h-screen p-1 bg-[#F5F7FC]">
+<!-- <div class="grid grid-cols-sidebarMainFooter grid-rows-headerMainFooter gap-1 h-screen p-1 bg-[#F5F7FC]">
   <header class="col-span-10 bg-qaliBlue border-2 border-black h-16">
     <app-header></app-header>
   </header>
@@ -16,4 +16,22 @@
   <footer class="col-start-2 col-end-11 row-start-3 row-end-4 bg-white border-2 h-10">
     <app-footer></app-footer>
   </footer>
+</div> -->
+<div class="flex flex-col gap-1 bg-[#F5F7FC] m-1 rounded-lg overflow-hidden">
+    <header class="h-16 bg-qaliBlue w-full">
+        <app-header></app-header>
+    </header>
+    <div class="flex h-full flex-row gap-1">
+        <div class="bg-qaliBlue">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="flex flex-col w-full h-full">
+            <div class="h-[calc(100vh-105px)] overflow-auto w-full bg-white">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="bg-white mt-1">
+                <app-footer></app-footer>
+            </div>
+        </div>
+    </div>
 </div>

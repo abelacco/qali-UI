@@ -9,6 +9,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  cities: any = [
+    {
+      value: "ponte"
+    },
+    {
+      value: "en"
+    },{
+      value: "4 pata"
+    }
+  ]
+  selectedCity = null
+
   constructor(private router: Router) { }
 
   login() {

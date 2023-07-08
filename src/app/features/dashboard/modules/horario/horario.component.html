@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="flex justify-end gap-5 items-center h-[38px]">
                                         <button class="text-qaliBlue bg-qaliGreen rounded-full text-2xl h-[22px] w-[22px] flex justify-center items-center"><fa-icon [icon]="['far', 'plus-circle']"></fa-icon></button>
-                                        <button class="text-qaliBlue rounded-full text-2xl h-[22px] w-[22px] flex justify-center items-center"><fa-icon [icon]="['far', 'clone']"></fa-icon></button>
+                                        <button class="text-qaliBlue rounded-full text-2xl h-[22px] w-[22px] flex justify-center items-center" (click)="modalDuplicarHora()"><fa-icon [icon]="['far', 'clone']"></fa-icon></button>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-5 hidden">
-                                    <p-calendar class="max-w-full" [(ngModel)]="date" [inline]="true"[showWeek]="true"></p-calendar>
+                                    <p-calendar class="max-w-full" [(ngModel)]="date" [inline]="true" [showWeek]="true"></p-calendar>
                                 </div>
                             </div>
                         </li>
