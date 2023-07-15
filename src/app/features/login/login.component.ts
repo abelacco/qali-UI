@@ -20,6 +20,7 @@ export class LoginComponent {
     }
   ]
   selectedCity = null
+  mostrarregister = false
 
   constructor(private router: Router) { }
 

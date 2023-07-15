@@ -33,10 +33,12 @@
     <div class="w-full lg:w-1/2 h-screen">
       <div class="flex items-center justify-center h-full">
           <div class="w-full lg:w-[500px] h-full lg:h-auto bg-white p-10 rounded-lg">
-                <p class="w-full block text-lg text-qaliBlue font-extrabold">No te encuentras registrado aun?</p>
-                <p>Crea una cuenta ahora!</p>
-                <button class="h-[45px] w-full text-center border font-bold text-xl rounded-lg border-qaliBlue uppercase mt-7 duration-200 hover:bg-qaliBlue hover:text-white" (onClick)="login()">Registrarme</button>
-                <div *ngIf="false">
+                <div *ngIf="!mostrarregister">
+                    <p class="w-full block text-lg text-qaliBlue font-extrabold">No te encuentras registrado aun?</p>
+                    <p>Crea una cuenta ahora!</p>
+                    <button class="h-[45px] w-full text-center border font-bold text-xl rounded-lg border-qaliBlue uppercase mt-7 duration-200 hover:bg-qaliBlue hover:text-white" (click)="mostrarregister = true">Registrarme</button>
+                </div>
+                <div *ngIf="mostrarregister">
                     <div class="flex justify-center">
                         <div class="w-[90px] h-[90px] bg-qaliBlue rounded-full flex items-center justify-center shadow-lg">
                             <img src="assets/images/qali-logo.png" alt="">
@@ -85,7 +87,7 @@
                                     <p-button class="w-[30px] text-center"><fa-icon [icon]="['fas', 'eye']" class="text-base"></fa-icon></p-button>
                                 </div>
                             </div>
-                            <p-button class="h-[45px] w-full text-center border font-bold text-xl rounded-lg border-qaliBlue uppercase mt-7 duration-200 hover:bg-qaliBlue hover:text-white" (onClick)="login()">Registrarme</p-button>
+                            <button class="h-[45px] w-full text-center border font-bold text-xl rounded-lg border-qaliBlue uppercase mt-7 duration-200 hover:bg-qaliBlue hover:text-white" (click)="login()">Registrarme</button>
                         </div>
                     </form>
                 </div>
