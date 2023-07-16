@@ -22,7 +22,7 @@ export class LoginComponent {
   selectedCity = null
   mostrarregister = false
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   login() {
     // Aquí iría el código para la autenticación del usuario

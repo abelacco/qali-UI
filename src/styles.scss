@@ -204,3 +204,16 @@ p-button {
     background-color: #132B5B;
   }
 }
+
+.modal-style {
+    .p-dialog-title {
+        color: #0FFFA9 !important;
+    };
+}
+
+
+.pcalendar-bordernone {
+    .p-datepicker {
+        border: none !important;
+    }
+}

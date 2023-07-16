@@ -1,0 +1,112 @@
+<div class="">
+    <form action="" class="mt-5 flex justify-center flex-col items-center" *ngIf="numerovista == 1">
+        <h2 class="text-2xl text-qaliBlue font-extrabold absolute top-[25px] left-[25px]">Crear cuenta de Paciente</h2>
+        <div class="w-[90%] flex flex-col gap-5">
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label for="" class="w-full block text-lg text-qaliBlue font-bold">Nombre</label>
+                    <input type="text" placeholder="email@email.com" class="border-2 px-2 text-base font-bold text-qaliBlue duration-200 font-sans outline-none hover:border-qaliBlue focus:border-qaliBlue border-[#00000082] h-[50px] rounded-lg mt-1 w-full">
+                </div>
+                <div>
+                    <label for="" class="w-full block text-lg text-qaliBlue font-bold">Apellido</label>
+                    <input type="text" placeholder="email@email.com" class="border-2 px-2 text-base font-bold text-qaliBlue duration-200 font-sans outline-none hover:border-qaliBlue focus:border-qaliBlue border-[#00000082] h-[50px] rounded-lg mt-1 w-full">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label for="" class="w-full block text-lg text-qaliBlue font-bold">Ciudad</label>
+                    <div class="h-[50px] border-2 border-[#00000082] bg-white outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
+                        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style2 w-full" [ngModelOptions]="{ standalone: true }"></p-dropdown>
+                    </div>
+                </div>
+                <div>
+                    <label for="" class="w-full block text-lg text-qaliBlue font-bold">Telefono</label>
+                    <input type="text" placeholder="email@email.com" class="border-2 px-2 text-base font-bold text-qaliBlue duration-200 font-sans outline-none hover:border-qaliBlue focus:border-qaliBlue border-[#00000082] h-[50px] rounded-lg mt-1 w-full">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label for="" class="w-full block text-lg text-qaliBlue font-bold">Email</label>
+                    <input type="text" placeholder="email@email.com" class="border-2 px-2 text-base font-bold text-qaliBlue duration-200 font-sans outline-none hover:border-qaliBlue focus:border-qaliBlue border-[#00000082] h-[50px] rounded-lg mt-1 w-full">
+                </div>
+                <div class="flex items-end">
+                    <div class="flex flex-col h-[50px]">
+                        <p>E-mail P.ej:</p>
+                        <span>ejemplo@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label for="" class="w-full block text-lg text-qaliBlue font-bold">Password</label>
+                    <div class="border-2 px-2 text-base font-bold text-qaliBlue duration-200 font-sans outline-none hover:border-qaliBlue focus:border-qaliBlue border-[#00000082] h-[50px] rounded-lg mt-1 w-full flex items-center">
+                        <input type="password" placeholder="&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;&#x2022;" class="h-full w-full outline-none">
+                        <p-button class="w-[30px] text-center"><fa-icon [icon]="['fas', 'eye']" class="text-base"></fa-icon></p-button>
+                    </div>
+                </div>
+                <div class="flex items-end">
+                    <div class="flex items-center h-[50px]">
+                        <p>Contraseña de cuenta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-center gap-5 mt-5">
+            <p-button class="px-5 h-[50px] rounded-lg bg-qaliBlue text-white font-extrabold text-xl flex items-center justify-center">Cancelar</p-button>
+            <p-button class="px-5 h-[50px] rounded-lg bg-qaliGreen text-qaliBlue font-extrabold text-xl flex items-center justify-center" (click)="numerovista = 2">Aceptar</p-button>
+        </div>
+    </form>
+    <div *ngIf="numerovista == 2">
+        <h2 class="text-2xl text-qaliBlue font-extrabold absolute top-[25px] left-[25px]">Turno y hora</h2>
+        <div class="flex justify-center">
+            <div class="w-[458px]">
+                <div class="flex items-center justify-between">
+                    <div class="flex flex-col items-center justify-center">
+                        <p class="text-xl font-extrabold text-qaliBlue">Escoge tu turno!</p>
+                        <div class="flex justify-center items-center mt-1">
+                            <p-button class="text-qaliBlue bg-qaliGreen rounded-lg font-bold w-[100px] text-center">Presencial</p-button>
+                            <p-button class="text-qaliBlue bg-[#F3F5F5] rounded-lg font-bold w-[100px] text-center">Online</p-button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <p class="text-xl font-extrabold text-qaliBlue">Duración</p>
+                        <p-calendar [timeOnly]="true" [(ngModel)]="date" class="pcalendar-clean text-[#132B5B] border-qaliGrey border-2 px-2 flex items-center justify-center rounded-5 text-17 w-[73px] h-[38px]"></p-calendar>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-3">
+                    <p-calendar class="w-[458px] pcalendar-bordernone" [(ngModel)]="date" [inline]="true"[showWeek]="true"></p-calendar>
+                </div>
+                <hr>
+                <div class="mt-5 flex flex-wrap gap-1">
+                    <p-button class="text-qaliBlue bg-qaliGreen rounded-lg font-bold px-1 text-center">8am</p-button>
+                    <p-button class="text-qaliBlue rounded-lg font-bold px-1 text-center">10am</p-button>
+                    <p-button class="text-qaliBlue rounded-lg font-bold px-1 text-center">3pm</p-button>
+                    <p-button class="text-qaliBlue rounded-lg font-bold px-1 text-center">5pm</p-button>
+                    <p-button class="text-qaliBlue rounded-lg font-bold px-1 text-center">6pm</p-button>
+                    <p-button class="text-qaliBlue rounded-lg font-bold px-1 text-center">7pm</p-button>
+                    <p-button class="text-qaliBlue rounded-lg font-bold px-1 text-center">8pm</p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="numerovista == 3">
+        <h2 class="text-2xl text-qaliBlue font-extrabold absolute top-[25px] left-[25px]">Cita realizada</h2>
+        <div class="flex justify-center">
+            <div class="w-[458px]">
+                <p class="bg-[#D9D9D9] text-xl text-qaliBlue text-center px-2 py-2 font-extrabold">Se ha creado la cita con el paciente abel chupapi acuña para el dia 21 de julio a las 9:00 am con una dureacion de 2 horas. Se ha notificado por whatsapp a lcient</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-7">
+        <div class="flex items-center justify-center">
+            <p-button (click)="numerovista=numerovista-1"><img src="assets/icons/double-arrow-left2.svg" alt=""></p-button>
+            <div class="flex items-center w-full justify-center gap-5">
+                <p class="w-[20px] h-[20px] rounded-full border-4 border-qaliBlue bg-qaliGreen"></p>
+                <p class="w-[20px] h-[20px] rounded-full border-4 border-qaliBlue"></p>
+                <p class="w-[20px] h-[20px] rounded-full border-4 border-qaliBlue"></p>
+            </div>
+            <p-button (click)="numerovista=numerovista+1"><img src="assets/icons/double-arrow-right3.svg" alt=""></p-button>
+        </div>
+    </div>
+</div>

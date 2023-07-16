@@ -6,17 +6,31 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { RouterModule } from '@angular/router'; // Importa RouterModule aquí
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CrearCitaComponent } from './components/sidebar/modals/crear-cita/crear-cita.component';
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
+import { CalendarModule } from 'primeng/calendar';
+import { FormsModule } from '@angular/forms';
+import { ListarCitasComponent } from './components/sidebar/modals/listar-citas/listar-citas.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    CrearCitaComponent,
+    ListarCitasComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ButtonModule,
+    TableModule,
+    CalendarModule,
+    FormsModule,
+    DropdownModule
   ],
   exports: [HeaderComponent, SidebarComponent, FooterComponent]
 })

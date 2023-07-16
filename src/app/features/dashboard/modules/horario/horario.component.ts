@@ -28,7 +28,9 @@ export class HorarioComponent {
 
     modalDuplicarHora() {
         this.dialogservice.open(DuplicarHorarioComponent, {
-            width: "500px"
+            width: "500px",
+            header: "Seleccione los dias",
+            styleClass: "modal-style"
         })
     }
 

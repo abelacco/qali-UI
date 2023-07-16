@@ -36,7 +36,7 @@
                 <div *ngIf="!mostrarregister">
                     <p class="w-full block text-lg text-qaliBlue font-extrabold">No te encuentras registrado aun?</p>
                     <p>Crea una cuenta ahora!</p>
-                    <button class="h-[45px] w-full text-center border font-bold text-xl rounded-lg border-qaliBlue uppercase mt-7 duration-200 hover:bg-qaliBlue hover:text-white" (click)="mostrarregister = true">Registrarme</button>
+                    <button class="h-[45px] w-full text-center border font-bold text-xl rounded-lg border-qaliBlue uppercase mt-7 duration-200 hover:bg-qaliBlue hover:text-white" (click)="mostrarregister = true;">Registrarme</button>
                 </div>
                 <div *ngIf="mostrarregister">
                     <div class="flex justify-center">
@@ -70,13 +70,13 @@
                                 <div>
                                     <label for="" class="w-full block text-lg text-qaliBlue font-extrabold">Especialidad</label>
                                     <div class="h-[45px] border-2 border-[#00000082] bg-white outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
-                                        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style2 w-full"></p-dropdown>
+                                        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" [optionLabel]="'value'" class="dropdown-clean dropdown-autoheight dropdown-style2 w-full" [ngModelOptions]="{ standalone: true }"></p-dropdown>
                                     </div>
                                 </div>
                                 <div>
                                     <label for="" class="w-full block text-lg text-qaliBlue font-extrabold">Ciudad</label>
                                     <div class="h-[45px] border-2 border-[#00000082] bg-white outline-none w-full mt-1 rounded-5 placeholder:text-qaliGrey placeholder:font-extrabold text-lg font-sans font-extrabold text-qaliBlue flex items-center">
-                                        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" optionLabel="value" class="dropdown-clean dropdown-autoheight dropdown-style2 w-full"></p-dropdown>
+                                        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Elige una opción" [optionLabel]="'value'" class="dropdown-clean dropdown-autoheight dropdown-style2 w-full" [ngModelOptions]="{ standalone: true }"></p-dropdown>
                                     </div>
                                 </div>
                             </div>

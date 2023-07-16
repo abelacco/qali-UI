@@ -18,5 +18,8 @@ export class HistorialClinicaPacienteComponent {
     }
   ]
 
+  mostrarenfermedades = false;
+  mostraralergias = false;
+
   selectedCity = null
 }
