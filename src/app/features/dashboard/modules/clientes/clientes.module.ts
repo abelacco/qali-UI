@@ -11,11 +11,15 @@ import { CalendarModule } from 'primeng/calendar';
 import { TableModule } from 'primeng/table';
 import { HistorialClinicaPacienteComponent } from './components/historial-clinica-paciente/historial-clinica-paciente.component';
 
+import { CheckboxModule } from 'primeng/checkbox';
+import { AgregarEnfermedadComponent } from './modals/agregar-enfermedad/agregar-enfermedad.component';
+
 
 @NgModule({
   declarations: [
     ClientesComponent,
-    HistorialClinicaPacienteComponent
+    HistorialClinicaPacienteComponent,
+    AgregarEnfermedadComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +29,8 @@ import { HistorialClinicaPacienteComponent } from './components/historial-clinic
     DropdownModule,
     FormsModule,
     CalendarModule,
-    TableModule
+    TableModule,
+    CheckboxModule
   ]
 })
 export class ClientesModule { }
